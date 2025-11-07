@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuentes */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #000000; 
+    background-color: #FFFFFF; 
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Header y Navegación */
+header {
+    background-color: #0A2E50;
+    color: #FFFFFF;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* .logo h1 {
+    font-size: 1.5rem;
+    text-decoration: none ;
+} */
+
+.logo img {
+    width: 130px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: 40px;
+}
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    z-index: 101;
+}
+
+.menu-icon {
+    width: 32px;
+    height: 4px;
+    background: #39FF14;
+    display: block;
+    position: relative;
+    border-radius: 2px;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 4px;
+    background: #39FF14;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.menu-icon::before { top: -10px; }
+.menu-icon::after { top: 10px; }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    transition: right 0.3s;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    transition: right 0.3s;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-shadow: 3px 5px 7px rgba(0, 0, 0, 0.707);
+}
+
+nav ul li a:hover {
+    color: #39FF14;
+}
+
+/* Secciones */
+section {
+    padding: 4rem 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+#inicio {
+    background-color: #0A2E50;
+    color: #FFFFFF;
+    text-align: center;
+    max-width: 1400px;
+    margin-top: 140px;
+    padding-top: 50px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 5px 3px 0px rgba(0, 0, 0, 0.559);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.559);
+}
+
+.btn {
+    background-color: #39FF14;
+    color: #000000;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-shadow:0  0 5px #39FF14;
+}
+
+.btn:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* Servicios y Público */
+.servicios-grid, .publico-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.servicio {
+    background-color: #F0F0F0;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 320px; /* iguala alturas del grid */
+}
+
+.servicio img {
+    width: 100%;
+    height: 190px;        /* ajustar altura fija deseada */
+    object-fit: cover;    /* recorta sin deformar */
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.target {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 320px; /* iguala alturas con .servicio */
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #F0F0F0;
+}
+
+.target img {
+    width: 100%;
+    height: 190px;    /* misma altura que .servicio img */
+    object-fit: cover; /* recorta sin deformar */
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+/* Contenido debajo de la imagen ocupa el espacio restante */
+.servicio h3, .servicio p {
+    margin: 0.5rem 0;
+    flex: 0 1 auto;
+}
+
+
+.servicio, .target {
+    background-color: #F0F0F0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.servicio h3, .target h3 {
+    color: #0A2E50;
+    margin-bottom: 1rem;
+}
+
+
+/* Contacto */
+#contacto {
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+
+
+
+.publico-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.publico-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.publico-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+
+
+.publico-track .target {
+    flex: 0 0 30%;
+    box-sizing: border-box;
+    margin: 0 15px;
+}
+
+/* Ajustes visuales para botones */
+.pub-prev, .pub-next {
+    background: rgba(10,46,80,0.9);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    min-width: 44px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+
+/* Footer */
+footer {
+    background-color: #0A2E50;
+    color: #FFFFFF;
+    text-align: center;
+    /* padding: 1rem; */
+    padding: 2.5rem 2rem;
+}
+
+/* 
+footer {
+    background: #0A2E50;
+    color: #FFFFFF;
+    padding: 2.5rem 2rem;
+    padding-left: 55px;
+} */
+
+.footer-bottom {
+    margin-top: 1rem; 
+    margin-bottom: -2rem;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    align-self: center;
+    width: 100%;
+}
+
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.footer-column {
+    flex: 1 1 260px; /* crece, pero no menos de 260px en escritorio */
+    min-width: 220px;
+}
+
+.footer-column h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+    color: #EAF6FF;
+}
+
+/* .footer-column p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.92);
+} */
+
+footer > p {
+ /* baja el texto un poco dentro del footer */
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.85);
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.45rem;
+}
+
+.footer-column a {
+    color: #CFEFFC;
+    text-decoration: none;
+    transition: color 0.18s ease;
+}
+
+.footer-column a:hover {
+    color: #39FF14;
+}
+
+/* Iconos sociales */
+.footer-icons {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    justify-content: center;
+    margin: 0;
+}
+
+.footer-icons li {
+    list-style: none;
+}
+
+.footer-icons a {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.06);
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    transition: background 0.18s, transform 0.12s;
+}
+
+.footer-icons a:hover {
+    background: rgba(57,255,20,0.14);
+    transform: translateY(-2px);
+}
+
+
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    /* .logo h1 {
+        font-size: 1rem;
+        display: block;
+    } */
+
+     .logo img {
+        width: 130px;
+        margin-left: 10px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        z-index: 220; /* encima del header y del menú para que el botón sea clicable */
+    }
+
+    .nav-list {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 50vw;               /* ancho del panel */
+        max-width: 300px;         /* opcional, evita que quede muy ancho en tablets pequeñas */
+        max-height: 350px;
+        margin-top: 65px;
+        background: #19466f;
+        padding-top: 26px;           /* deja espacio para el header fijo (ajusta si tu header tiene otra altura) */
+        padding-right: 20px;
+        padding-left: 30px;
+        box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.497);
+        transform: translateX(110%); /* empieza oculto fuera de la pantalla */
+        transition: transform 0.35s ease;
+        overflow-y: auto;            /* permite scroll dentro del menú sin mover la página */
+        -webkit-overflow-scrolling: touch;
+        will-change: transform;
+        z-index: 200;              
+    }
+
+    .nav-list.open {
+        transform: translateX(0);    /* visible */
+    }
+
+    .nav-list li {
+        margin: 30px 0 15px 10px;
+        text-align: left;
+    }
+
+
+
+
+    nav {
+        flex-wrap: wrap;
+    }
+    nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .servicio {
+        min-height: 260px;
+    }
+    .servicio img {
+        height: 150px;
+    }
+
+    .target {
+        min-height: 260px;
+    }
+    .target img {
+        height: 150px;
+    }
+    footer > p {
+        margin-top: 1.2rem;
+    }
+    footer {
+        padding-bottom: 1.25rem;
+        padding-left: 33px;
+    }
+    .footer-bottom {
+        margin-top: 1.2rem;
+        margin-bottom: -1rem; 
+    }
+
+}
+
+
+/* Responsive: vista en tablets*/
+@media (max-width: 1024px) {
+    #inicio {
+    background-color: #0A2E50;
+    color: #FFFFFF;
+    text-align: center;
+    max-width: 850px;
+    margin-top: 140px;
+    padding-top: 50px; 
+   
+}
+
+ .publico-track .target {
+        flex: 0 0 50%;
+}
+
+.publico-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.publico-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.publico-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+
+
+.publico-track .target {
+    flex: 0 0 30%;
+    box-sizing: border-box;
+    margin: 0 20px;
+}
+
+    
+}
+
+@media (max-width: 480px) {
+    .publico-track .target {
+        flex: 0 0 100%; 
+        margin: 0;
+    }
+}
